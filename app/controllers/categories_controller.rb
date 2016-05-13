@@ -1,24 +1,26 @@
+# categories controller
 class CategoriesController < ApplicationController
+  
   def new
-      @page_title = 'Add new Category'
-      @category = Category.new
+    @page_title = 'Add new Category'
+    @category = Category.new
   end
 
   def create
     @category = Category.new(category_params)
-   if @category.save
-    flash[:notice] = "Category Created"
-    redirect_to categories_path
-  else
-    render 'new'
-  end
+    if @category.save
+      flash[:notice] = 'Category Created'
+      redirect_to categories_path
+    else
+      render 'new'
+    end
   end
 
   def update
-     @category = Category.find(params[:id])
-     @category.update(category_params)
-     flash[:notice] = "Category Updated"
-     redirect_to categories_path
+    @category = Category.find(params[:id])
+    @category.update(category_params)
+    flash[:notice] = 'Category Updated'
+    redirect_to categories_path
   end
 
   def edit
@@ -26,10 +28,10 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-     @category= Category.find(params[:id])
+    @category = Category.find(params[:id])
     @category.destroy
-    flash[:notice] = "Category Removed"
-     redirect_to categories_path
+    flash[:notice] = 'Category Removed'
+    redirect_to categories_path
   end
 
   def index
@@ -43,9 +45,8 @@ class CategoriesController < ApplicationController
   end
 
   private
-    def category_params 
-     params.require(:category).permit(:name)
-    end
 
-
+  def category_params
+    params.require(:category).permit(:name)
+  end
 end
