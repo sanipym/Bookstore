@@ -19,7 +19,8 @@ RSpec.describe PublishersController, type: :controller do
   end
 
   it 'creates publisher failure' do
-    expect{ (post :create, publisher: @params_error).response.status.to render_template('new') }
+    post :create, publisher: @params_error
+    expect(response).to render_template('new')
   end
 
   it 'updates the publisher' do
@@ -28,7 +29,8 @@ RSpec.describe PublishersController, type: :controller do
   end
 
   it 'renders the edit page' do
-    expect{ ( get :edit, id: @publisher.id).response.status.to render_template('edit') }
+    get :edit, id: @publisher.id
+    expect(response).to render_template('edit')
   end
 
   it 'destroys publisher' do
@@ -36,10 +38,12 @@ RSpec.describe PublishersController, type: :controller do
   end
 
   it 'redirect index' do
-    expect{ (get :index).response.status.to render_template('index') }
+    get :index
+    expect(response).to render_template('index')
   end
 
   it 'render the show' do
-    expect{ (get :show, id: @publisher.id).response.status.to render_template('show') }
+    get :show, id: @publisher.id
+    expect(response).to render_template('show')
   end
 end
