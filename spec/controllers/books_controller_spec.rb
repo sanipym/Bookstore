@@ -27,6 +27,11 @@ RSpec.describe BooksController, type: :controller do
     expect(response).to render_template('edit')
   end
 
+  it 'renders the show' do
+    get :show, id: @book.id
+    expect(response).to render_template('show')
+  end
+
   it 'destroy a book' do
     expect{delete :destroy, id: @book.id}.to change(Book, :count).by(-1)
   end
@@ -34,9 +39,5 @@ RSpec.describe BooksController, type: :controller do
   it 'renders index' do
     get :index
     expect(response).to render_template('index')
-  end
-
-  it 'renders the show' do
-    expect{ (get :show, id: @book.id).response.status.to render_template('show') }
   end
 end
