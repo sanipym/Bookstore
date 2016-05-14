@@ -9,7 +9,8 @@ RSpec.describe CategoriesController, type: :controller do
   end
 
   it 'renders the new' do
-    expect{ (get :new).response.status.to render_template('new') }
+    get :new
+    expect(response).to render_template('new')
   end
 
   it 'create a category' do
@@ -28,7 +29,13 @@ RSpec.describe CategoriesController, type: :controller do
   end
 
   it 'edit a category' do
-    expect{ (get :edit, id: @category1.id).to render_template('edit') }
+    get :edit, id: @category1.id
+    expect(response).to render_template('edit')
+  end
+
+  it 'renders the show' do
+    get :show, id: @category1.id
+    expect(response).to render_template('show')
   end
 
   it 'destroy a category' do
@@ -36,11 +43,7 @@ RSpec.describe CategoriesController, type: :controller do
   end
 
   it 'renders index' do
-    expect{ (get :index).to render_template('index') }
+    get :index
+    expect(response).to render_template('index')
   end
-
-  it 'renders the show' do
-    expect{ (get :show, id: @category1.id).response.status.to render_template('show') }
-  end
-
 end

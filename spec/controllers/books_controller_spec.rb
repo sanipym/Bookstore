@@ -8,12 +8,13 @@ RSpec.describe BooksController, type: :controller do
   end
 
   it 'renders the new' do
-    expect{(get :new).response.status.to render_template('new') }
+    get :new
+    expect(response).to render_template('new')
   end
 
   it 'create a book' do
     post :create, book: @params
-    expect { response.status.to redirect_to('index') }
+    expect(response.status).to redirect_to('/books')
   end
 
   it 'update a book' do
@@ -22,7 +23,8 @@ RSpec.describe BooksController, type: :controller do
   end
 
   it 'edit a book' do
-    expect{ (get :edit, id: @book.id).to render_template('edit')}
+    get :edit, id: @book.id
+    expect(response).to render_template('edit')
   end
 
   it 'destroy a book' do
@@ -30,7 +32,8 @@ RSpec.describe BooksController, type: :controller do
   end
 
   it 'renders index' do
-    expect{ (get :index).to render_template('index') }
+    get :index
+    expect(response).to render_template('index')
   end
 
   it 'renders the show' do
