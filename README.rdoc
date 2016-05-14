@@ -1,3 +1,8 @@
+
+ {<img src="https://codeclimate.com/github/anoobbava/Bookstore/badges/gpa.svg" />}[https://codeclimate.com/github/anoobbava/Bookstore]
+{<img src="https://codeclimate.com/github/anoobbava/Bookstore/badges/coverage.svg" />}[https://codeclimate.com/github/anoobbava/Bookstore/coverage]
+ {<img src="https://codeclimate.com/github/anoobbava/Bookstore/badges/issue_count.svg" />}[https://codeclimate.com/github/anoobbava/Bookstore]
+ {<img src="https://travis-ci.org/anoobbava/Bookstore.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/anoobbava/Bookstore]
 Book Store
 -------------
 
@@ -7,8 +12,4 @@ Book Store
 
 
  by sanish(email:sanipym@gmail.com)
-
- {<img src="https://codeclimate.com/github/anoobbava/Bookstore/badges/gpa.svg" />}[https://codeclimate.com/github/anoobbava/Bookstore]
- {<img src="https://codeclimate.com/github/anoobbava/Bookstore/badges/coverage.svg" />}[https://codeclimate.com/github/anoobbava/Bookstore/coverage]
- {<img src="https://codeclimate.com/github/anoobbava/Bookstore/badges/issue_count.svg" />}[https://codeclimate.com/github/anoobbava/Bookstore]
- {<img src="https://travis-ci.org/anoobbava/Bookstore.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/anoobbava/Bookstore]
+ rspec by anoob bava(anoob.bava@gmail.com)
