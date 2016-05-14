@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+  - 1.9.3
+  - 2.2.0
+  - 2.3.0
+env:
+  - DB=mysql
+before_script:
+  - mysql -e 'create database bookstore_test;'
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
+addons:
+  code_climate:
+    repo_token: 98b1c69e38f4222fb71dbb76cdb39fd4a1d15fc95e83c18f7b758129c62f8964
