@@ -1,3 +1,35 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+{<img src="https://codeclimate.com/github/anoobbava/Bookstore/badges/gpa.svg" />}[https://codeclimate.com/github/anoobbava/Bookstore]
+{<img src="https://codeclimate.com/github/anoobbava/Bookstore/badges/coverage.svg" />}[https://codeclimate.com/github/anoobbava/Bookstore/coverage]
+{<img src="https://codeclimate.com/github/anoobbava/Bookstore/badges/issue_count.svg" />}[https://codeclimate.com/github/anoobbava/Bookstore]
+{<img src="https://travis-ci.org/anoobbava/Bookstore.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/anoobbava/Bookstore]
+
+
 Book Store
 -------------
 
@@ -7,3 +39,4 @@ Book Store
 
 
  by sanish(email:sanipym@gmail.com)
+ rspec by anoob bava(anoob.bava@gmail.com)

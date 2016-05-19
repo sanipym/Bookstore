@@ -1,3 +1,4 @@
+# authors controller
 class AuthorsController < ApplicationController
   def new
     @page_title = 'Add new Author'
